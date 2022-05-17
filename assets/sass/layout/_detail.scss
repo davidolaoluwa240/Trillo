@@ -1,0 +1,38 @@
+.detail {
+  @include flex-box();
+  padding: 4.5rem;
+  background: getColor("grey-light-1");
+  border-bottom: 1px solid getColor("grey-light-2");
+  font-size: 1.4rem;
+
+  @include respond(tab-port) {
+    padding: 3rem;
+  }
+
+  @include respond(phone) {
+    flex-direction: column;
+  }
+}
+
+.description {
+  flex: 0 0 60%;
+  background: getColor("light");
+  box-shadow: 0 2rem 5rem rgba(getColor("dark"), 0.06);
+  padding: 3rem;
+  margin-right: 4.5rem;
+
+  @include respond(tab-port) {
+    padding: 2rem;
+    margin-right: 3rem;
+  }
+
+  @include respond(phone) {
+    margin-right: 0;
+    margin-bottom: 3rem;
+  }
+}
+
+.user-review {
+  flex: 1;
+  @include flex-box($align-items: center, $flex-direction: column);
+}

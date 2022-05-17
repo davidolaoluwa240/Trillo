@@ -1,0 +1,35 @@
+// GOOGLE FONT IMPORT
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap");
+
+// ABSTRACTS
+@import "./abstracts/variables";
+@import "./abstracts/functions";
+@import "./abstracts/mixins";
+
+// BASE
+@import "./base/animation";
+@import "./base/base";
+@import "./base/typography";
+@import "./base/utilities";
+
+// COMPONENTS
+@import "./components/search";
+@import "./components/user-nav";
+@import "./components/side-nav";
+@import "./components/gallery";
+@import "./components/overview";
+@import "./components/btn-inline";
+@import "./components/list";
+@import "./components/recommend";
+@import "./components/review";
+@import "./components/cta";
+@import "./components/btn";
+
+// LAYOUT
+@import "./layout/header";
+@import "./layout/side-bar";
+@import "./layout/hotel-view";
+@import "./layout/detail";
+
+// PAGE
+@import "./page/home";

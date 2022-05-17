@@ -1,0 +1,18 @@
+.header {
+  height: 7rem;
+  background-color: getColor("light");
+  border-bottom: 1px solid getColor("grey-light-2");
+  font-size: 1.4rem;
+  @include flex-box(space-between, center);
+
+  &__logo {
+    height: 3.25rem;
+    margin-left: 2rem;
+  }
+
+  @media only screen and (max-width: 500px) {
+    flex-wrap: wrap;
+    align-content: space-around;
+    height: 11rem;
+  }
+}

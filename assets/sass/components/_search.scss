@@ -1,0 +1,59 @@
+.search {
+  flex: 0 0 40%;
+  @include flex-box(center, center);
+
+  @media only screen and (max-width: 500px) {
+    order: 1;
+    background-color: getColor("grey-light-2");
+    flex: 0 0 100%;
+  }
+
+  &__input {
+    width: 90%;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: getColor("grey-light-2");
+    border: none;
+    padding: 0.7rem 2rem;
+    border-radius: 100px;
+    margin-right: -3.25rem;
+    transition: all 0.2s ease;
+
+    &:focus {
+      width: 100%;
+      outline: none;
+      background-color: getColor("grey-light-3");
+    }
+
+    &::-webkit-input-placeholder,
+    &::placeholder {
+      font-weight: 100;
+      color: getColor("grey-light-4");
+    }
+  }
+
+  &__input:focus + &__button {
+    background-color: getColor("grey-light-3");
+  }
+
+  &__button {
+    background-color: getColor("grey-light-2");
+    border: none;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      transform: translateY(2px);
+    }
+  }
+
+  &__icon {
+    width: 2rem;
+    height: 2rem;
+    fill: getColor("grey-dark-3");
+  }
+}

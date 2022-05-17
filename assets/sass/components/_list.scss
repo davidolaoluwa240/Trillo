@@ -1,0 +1,36 @@
+.list {
+  list-style-type: none;
+  margin: 3rem 0;
+  padding: 3rem 0;
+  border-bottom: 1px solid getColor("grey-light-2");
+  border-top: 1px solid getColor("grey-light-2");
+
+  @include flex-box($flex-wrap: wrap);
+
+  &__item {
+    flex: 0 0 50%;
+    margin-bottom: 0.7rem;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      height: 1rem;
+      width: 1rem;
+      margin-right: 0.7rem;
+
+      // OLDER BROWSER
+      background-image: url("../images/SVG/chevron-thin-right.svg");
+      background-size: cover;
+
+      // NEW BROWSER
+      @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+        background-color: getColor("primary");
+        -webkit-mask-image: url("../images/SVG/chevron-thin-right.svg");
+        -webkit-mask-size: cover;
+        mask-image: url("../images/SVG/chevron-thin-right.svg");
+        mask-size: cover;
+        background-image: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.recommend {
+  font-size: 1.3rem;
+  color: getColor("grey-dark-3");
+  @include flex-box($align-items: center);
+
+  &__count {
+    margin-right: auto;
+  }
+
+  &__friends {
+    @include flex-box();
+  }
+
+  &__photo {
+    box-sizing: content-box;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: 3px solid getColor("light");
+
+    &:not(:last-of-type) {
+      margin-right: -2rem;
+    }
+  }
+}

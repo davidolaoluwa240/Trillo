@@ -1,0 +1,21 @@
+body {
+  font-size: getBaseFont("default-font-size");
+  font-family: getBaseFont("default-font-family");
+  font-weight: getBaseFont("default-font-weight");
+  line-height: getBaseFont("default-line-height");
+  min-height: 100vh;
+  background-image: linear-gradient(
+    to right bottom,
+    getColor("primary-light"),
+    getColor("primary-dark")
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: getColor("grey-dark-2");
+}
+
+.paragraph {
+  &:not(:last-of-type) {
+    margin-bottom: 2rem;
+  }
+}
